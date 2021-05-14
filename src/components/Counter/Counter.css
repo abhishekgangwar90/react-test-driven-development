@@ -1,0 +1,8 @@
+.counter {
+  text-align: center;
+}
+
+.counter-header {
+  font-size: calc(10px + 2vmin);
+  color: #282c34;
+}
