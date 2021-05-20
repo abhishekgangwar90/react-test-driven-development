@@ -1,5 +1,5 @@
 import {shallow} from 'enzyme'
-import { findByTestAttr } from '../../utils/test-utils'
+import { checkProps, findByTestAttr } from '../../utils/test-utils'
 import Congrats from './Congrats'
 
 /**
@@ -28,5 +28,9 @@ describe('Congrats component',() =>{
     const wrapper = setup({success: true});
     const attr = findByTestAttr(wrapper, 'Congrats-component');
     expect(attr.text()).toBe('Congratulations, You have Guessed the word.')
+  })
+
+  test('Should throw error if incorrect props are added', () =>{
+    expect(checkProps(Congrats, { success: false })).toBe(undefined)
   })
 })

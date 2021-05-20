@@ -1,4 +1,5 @@
 import React from 'react';
+import Congrats from '../../components/Congrats/Congrats';
 import './wordGuess.css';
 
 
@@ -6,8 +7,8 @@ import './wordGuess.css';
  * @return {*} 
  */
 function WordGuess(){
-  return <div>
-    <h1 className="header">Guess the Word</h1>
+  return <div className="container">
+    <Congrats success={true} />
   </div>
 }
 
